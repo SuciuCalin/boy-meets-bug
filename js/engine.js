@@ -27,8 +27,8 @@ var Engine = (function(global) {
         lastTime;
 
 
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
+    canvas.width = CANVAS_WIDTH;
+    canvas.height = CANVAS_HEIGHT;
     doc.body.appendChild(canvas);
     doc.body.appendChild(info);
     info.innerHTML = "Press 'n' to select a character and start a new game";

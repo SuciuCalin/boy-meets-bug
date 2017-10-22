@@ -1,5 +1,5 @@
-const canvasWidth = 909;    // The width of the canvas
-const canvasHeight = 656;   // The height of the canvas
+const CANVAS_WIDTH = 909;    // The width of the canvas
+const CANVAS_HEIGHT = 656;   // The height of the canvas
 
 const enemySpeed = 50;                      // The speed of the enemy
 const fasterEnemySpeed = 2 * enemySpeed;    // The speed of the FasterEnemy
@@ -73,7 +73,7 @@ class Enemy extends Sprite {
         this.x += (level * enemySpeed) * dt;
 
         // When the enemy moves off the screen, the X position will be reset
-        if (this.x > canvasWidth) {
+        if (this.x > CANVAS_WIDTH) {
             this.x = randomX();
         }
 
@@ -93,7 +93,7 @@ class FasterEnemy extends Enemy {
         this.x += (level * fasterEnemySpeed) * dt;
 
         // When the enemy moves off the screen, the X and Y positions will be reset
-        if (this.x > canvasWidth) {
+        if (this.x > CANVAS_WIDTH) {
             this.x = randomX();
             this.y = randomY();
         }
@@ -124,13 +124,13 @@ class Player extends Sprite {
                 break;
         }
 
-        // Confine players movement to the canvasWidth and canvasHeight
-        if (this.x > canvasWidth - 109) {
-            this.x = canvasWidth - 109;
+        // Confine players movement to the CANVAS_WIDTH and CANVAS_HEIGHT
+        if (this.x > CANVAS_WIDTH - 109) {
+            this.x = CANVAS_WIDTH - 109;
         } else if (this.x < 0) {
             this.x = 0;
-        } else if (this.y > canvasHeight - 206) {
-            this.y = canvasHeight - 206;
+        } else if (this.y > CANVAS_HEIGHT - 206) {
+            this.y = CANVAS_HEIGHT - 206;
         } else if (this.y < -50) {
             this.y = -30;
         }
@@ -195,7 +195,7 @@ function renderScore() {
     ctx.fillText("Level: " + level, 10, 30);
 
     // Draws the time information
-    ctx.fillText(time + " seconds", canvasWidth / 2 - 30, 30);
+    ctx.fillText(time + " seconds", CANVAS_WIDTH / 2 - 30, 30);
 
     // Draws the collected key information
     ctx.drawImage(Resources.get(scoreKey), 780, 5);
