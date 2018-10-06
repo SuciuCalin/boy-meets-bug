@@ -9,7 +9,7 @@ In this game you have a Player and Enemies (Bugs & Rocks). The goal of the playe
 
 ## Installation
 
-Clone or download this repository, and open the index.html file in your browser.
+Clone or download this repository, and open the `index.html` file in your browser.
 
 Or [See it live](https://suciucalin.github.io/boy-meets-bug/).
 
